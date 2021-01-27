@@ -1,0 +1,25 @@
+{
+  "name": "suncumun",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "sa as",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discordjs-advanced": "^2.0.6",
+    "discordjs-ytdl": "^1.4.0",
+    "ffmpeg-static": "^4.2.7",
+    "fs": "0.0.1-security",
+    "i": "^0.3.6",
+    "install": "^0.13.0",
+    "opus": "0.0.0",
+    "opusscript": "0.0.7",
+    "path": "^0.12.7",
+    "proton-io": "^0.1.5",
+    "ytdl-core": "^4.4.5"
+  }
+}

@@ -1,0 +1,28 @@
+const Discord = require("discord.js");
+
+client.on('message', message=> {
+if (message.content.startsWith('oylama')) {
+const args = message.content.split(' ').slice(1)
+const { Cleint, MessageEmbed } = require('discord.js')
+const botmesajı = args.join(" ")
+if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(' Oylama yapmak için YÖNETİCİ rolüne sahip olmalısın.');
+if (!botmesajı) return message.reply('Oylamanın ne olacağını yazmadın.');
+message.delete(message.author)
+const embed = new MessageEmbed()
+.setTitle('OYLAMA')
+.setDescription(botmesajı)
+.setFooter('sa as botu');
+message.channel.send({ embed: embed }).then( embedMessage => {
+embedMessage.react("😀")
+embedMessage.react("😡")
+embedMessage.react("✔️")
+embedMessage.react("❌");
+})
+}
+});
+const Discord = require("discord.js");
+var prefix = ayarlar.prefix;
+client.on("message", (message) => {
+    if(message.content === prefix+"ping")
+    message.channel.send(`**Pingimi ${client.ws.ping} MS Olarak Ölçtüm! **`)
+    })
